@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Cinema</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="row">
+
+            <div class="col-12 header_area">
+                <div class="row">
+                    <div class="col-10 menu_area">
+                        <nav class="nav nav-pills flex-colum flex-sm-row">
+                            <a href="" class="navbar-brand">
+                                <img src="img/logo.png" class="d-inline-block align-top logo" alt="" loading="lazy" style="margin-left: 17px;">
+                            </a>
+                            <a class="nav-link" href="#lancamento" style="color: white;">Lançamentos</a>
+                            <a class="nav-link" href="#em-destaque" style="color: white;">Em destaque</a>
+                            <a class="nav-link" href="#avaliar" style="color: white;">Avaliações</a>
+                            <a class="nav-link" href="#makingof" style="color: white;">Entrevistas & Making of</a>
+                            <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true" style="color: white;">Novidades</a>
+                            <a class="nav-link" href="#bapi" style="color: white;">Pesquisar na Biblioteca (API)</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container mt-4 mb-4" id="pesquisa-alt">
+        <div class="mb-4" id="bapi">
+            <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Pesquisar na biblioteca..." aria-label="Pesquisar">
+        </div>
+        <div id="searchResult" class="row">
+
+        </div>
+    </section>
+    <section id="destaque" class="container mt-4 mb-4">
+        <header class="mb-4">
+            <h2>Biblioteca de Filmes(API)</h2>
+        </header>
+        <div id="films" class="row mb-4">
+        </div>
+        <nav id="paginate" class="row justify-content-center">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a href="#" class="page-link">
+                        <span aria-hidden="true">&laquo</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item active">
+                    <a href="" class="page-link">1</a>
+                </li>
+                <li class="page-item disabled">
+                    <a href="#" aria-label="Next" class="page-link">
+                        <span aria-hidden="true">&raquo</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light cor">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+        </div>
+    </nav>
+    <h1 class="lanca" id="lancamento">Lançamentos</h1>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active caro">
+
+                <section class="row lançamentos">
+                    <div id="video" class="col-6">
+                        <iframe width="100%" height="500" class="col-12 col-sm-12 col-md-6 col-lg-12" src="https://www.youtube.com/embed/NnDGWyfP7q4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-6">
+                        <div id="descrição">
+                            <h1 class="título">FAST AND FURIOUS 9</h1>
+                            <p class="descrição" style="text-align:left;text-align: justify;">
+                                <strong>Sinopse:</strong> Nono filme da série Velozes & Furiosos, e segundo da nova trilogia (Velozes 8, 9 e 10), que não conta mais com a presença de Paul Walker, falecido em 2013. O longa vem dando continuidade às corridas
+                                eletrizantes da equipe de amigos liderada por Dominic Toretto (Vin Diesel).
+                            </p>
+                            <p class="descrição"><strong>Diretor:</strong> Justin Lin | <strong>Roteirista:</strong> Gary Scott Thompson | <strong>Estréia:</strong> Abril, 2021.
+                            </p>
+                            <p style=text-align:left><strong>Elenco:</strong> Vin Diesel | John Cena | Michelle Rodriguez | Tyrese Gibson | Ludacris | Nathalie Emmanuel | Jordana Brewster | Sung Kang | Helen Mirren | Charlize Theron</p>
+                            <p style=text-align:left><strong>Avaliação:</strong> &star; &star; &star; &star; &star;</p>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+            <div class="carousel-item caro">
+
+                <section class="row lançamentos ">
+                    <div id="video" class="col-6">
+                        <iframe width="100%" height="480" class="col-12 col-sm-12 col-md-6 col-lg-12" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-6">
+                        <div id="descrição">
+                            <h1 class="título">Avengers: Endgame</h1>
+                            <p class="descrição" style="text-align:left;text-align: justify;">
+                                <strong>Sinopse:</strong> Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha
+                                Romanov lideram a resistência contra o titã louco.
+                            </p>
+                            <p class="descrição"><strong>Diretor:</strong> Joe Russo, Anthony Russo | <strong>Roteirista:</strong> Christopher Markus, Stephen McFeely | <strong>Estréia:</strong> Abril, 2019.
+                            </p>
+                            <p style=text-align:left><strong>Elenco:</strong> Robert Downey Jr. | Chris Evans | Mark Ruffalo | Chris Hemsworth | Scarlett Johansson | Jeremy Renner | Don Cheadle | Paul Rudd | Brie Larson | Karen Gillan | Danai Gurira | Bradley Cooper | Josh Brolin.
+                            </p>
+                            <p style=text-align:left><strong>Avaliação:</strong> &star; &star; &star; &star; &star;</p>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+            <div class="carousel-item caro">
+
+                <section class="row lançamentos">
+                    <div id="video" class="col-6">
+                        <iframe width="560" height="500" class="col-12 col-sm-12 col-md-6 col-lg-12" src="https://www.youtube.com/embed/Nt9L1jCKGnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
+
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-6">
+                        <div id="descrição">
+                            <h1 class="título">SPIDER-MAN: FAR FROM HOME</h1>
+                            <p class="descrição" style="text-align:left;text-align: justify;">
+                                <strong>Sinopse:</strong> Em Homem-Aranha: Longe de Casa, Peter Parker (Tom Holland) está em uma viagem de duas semanas pela Europa, ao lado de seus amigos de colégio, quando é surpreendido pela visita de Nick Fury (Samuel
+                                L. Jackson). Precisando de ajuda para enfrentar monstros nomeados como Elementais, Fury o convoca para lutar ao lado de Mysterio (Jake Gyllenhaal), um novo herói que afirma ter vindo de uma Terra paralela. Além da nova
+                                ameaça, Peter precisa lidar com a lacuna deixada por Tony Stark, que deixou para si seu óculos pessoal, com acesso a um sistema de inteligência artificial associado à Stark Industries.
+                            </p>
+                            <p class="descrição"><strong>Diretor:</strong> Jon Watts | <strong>Roteirista:</strong> Chris McKenna, Erik Sommers | <strong>Estréia:</strong> Julho, 2019.
+                            </p>
+                            <p style=text-align:left><strong>Elenco:</strong> Tom Holland | Samuel L. Jackson | Zendaya | Cobie Smulders | Jon Favreau | J. B. Smoove | Jacob Batalon | Martin Starr | Marisa Tomei | Jake Gyllenhaal.
+                            </p>
+                            <p style=text-align:left><strong>Avaliação:</strong> &star; &star; &star; &star; &star;</p>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+    </div>
+
+
+    <div class="container">
+        <h2 id="em-destaque">Em destaque</h2>
+        <section class="row em-destaque">
+
+
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <img src="img/p2.jpg" style="height: 266px; width: 189px;">
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <img src="img/p3.jpg" style="height: 266px; width: 189px;">
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <img src="img/p4.jpg" style="height: 266px; width: 189px;">
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 ">
+                <img src="img/p5.jpg" style="height: 266px; width: 189px;">
+            </div>
+
+
+        </section>
+
+        <div id="botão ">
+            <form method="get " action=" +opções.html "><button type="submit " class="butão ">+ Carregar mais
+                    filmes</button>
+            </form>
+        </div>
+
+
+
+
+        <h3 class="avalia" id="avaliar">Últimas avaliações</h3>
+        <section class="row últimas-avaliações ">
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-4">
+                <img class="ava " src="img/p10.jpg" style="height: 266px; width: 300px;">
+                <p><span><b>Leticia Mateus</b></span></p>
+                <p style="text-align: justify;">Filme incrível, extremamente emocionante. Todos de casa choraram horrores, recomendo 100%.</p>
+                <p>&star; &star; &star; &star; &star;</p> <span>02/09/2020</span>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-4 ">
+                <img class="ava " src="img/p9.jpg" style="height: 266px; width: 189px;">
+                <p><span><b>Nathalya Bruna</b></span></p>
+                <p style="text-align: justify;">O filme passa por momentos de extrema tensão, e deixa o telespectador extremamente entretido. Recomendo.</p>
+                <p>&star; &star; &star; &star;</p> <span>02/09/2020</span>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-4 ">
+                <img class="ava " src="img/p11.jpg" style="height: 266px; width: 189px;">
+                <p><span><b>João da Silva</b></span></p>
+                <p style="text-align: justify;">Filme incrível, a sequência é simplesmente perfeita. É de extrema importância que se assista o primeiro filme para não ficar sem entender o que se passa no segundo.</p>
+                <p>&star; &star; &star; &star; &star;</p> <span>02/09/2020</span>
+            </div>
+        </section>
+
+        <h4 id="makingof">Entrevistas & Making Of</h4>
+        <section class="row entrevista ">
+
+            <div id="video1 " class="col-12 col-sm-4 col-md-4 col-lg-4 ">
+                <iframe width="300 " height="300 " src="https://www.youtube.com/embed/-xGCugqnPd0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h1>Filme: O Homem nas Trevas</h1>
+                <p>Diretor: Fede Alvarez</p>
+                <p>Roteiro: Fede Alvarez and Rodo Sayagues | Estréia: 2016</p>
+            </div>
+
+
+            <div id="video1 " class="col-12 col-sm-4 col-md-4 col-lg-4 ">
+                <iframe width="300 " height="300 " src="https://www.youtube.com/embed/Ciu5yQYwJgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+                <h1>Filme: Vingadores: Era de Ultron </h1>
+                <p>Diretor: Joss Whedon</p>
+                <p>Roteiro: Joss Whedon | Estréia: 2015</p>
+            </div>
+
+
+            <div id="video1 " class="col-12 col-sm-4 col-md-2 col-lg-4 ">
+                <iframe width="300 " height="300 " src="https://www.youtube.com/embed/cLVNJ50vCDI " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
+                <h1>Filme: Coringa</h1>
+                <p>Diretor: Todd Phillips</p>
+                <p>Roteiro: Todd Phillips | Estréia: 2019</p>
+            </div>
+            <div id="botão ">
+                <form method="get "><button type="submit " class="butão ">+ Carregar mais
+                        filmes</button>
+                </form>
+            </div>
+
+        </section>
+
+        <div>
+            <section class="row novidades ">
+                <div class="col-9 ">
+                    <h1 id="news">Novidades</h1><span></span>
+                    <div class="row ">
+                        <div class="col-4 ">
+                            <img src="img/p6.jpg" height="270px ">
+                        </div>
+                        <div class="col-8 ">
+                            <h2>
+                                Death Note
+                            </h2>
+                            <div style="text-align: justify;">
+                                <p>Um estudante de repente encontra um caderno que caiu do céu. Trata-se do Death Note, que permite ao seu portador matar qualquer pessoa a partir da mera anotação do nome do alvo em uma de suas páginas. Sob a influência de
+                                    Ruyk, dono do caderno, ele passa a usá-lo para eliminar criminosos e pessoas que escaparam da justiça. A súbita onda de assassinatos faz com que ele seja endeusado por muitos, que o apelidam de Kira, mas também atrai
+                                    a atenção de um enigmático e brilhante detetive, chamado L.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-4 ">
+                            <img src="img/p7.jpg" height="270px ">
+                        </div>
+                        <div class="col-8 ">
+                            <h2>
+                                Viúva Negra
+                            </h2>
+                            <div style="text-align: justify;">
+                                <p>Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB, que a prepara para se tornar sua agente definitiva. Quando a URSS rompe, o governo tenta matá-la enquanto a ação se move para a atual
+                                    Nova York, onde ela trabalha como freelancer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-4 ">
+                            <img src="img/p8.jpg" height="270px ">
+                        </div>
+                        <div class="col-8 ">
+                            <h2>
+                                Capitã Marvel
+                            </h2>
+                            <div style="text-align: justify;">
+                                <p>Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls. Ao tentar impedir uma invasão de larga escala na Terra, em 1995, ela tem memórias
+                                    recorrentes de uma outra vida, como Carol Danvers, agente da Força Aérea norte-americana. Com a ajuda de Nick Fury, Capitã Marvel precisa descobrir os segredos de seu passado e pôr um fim ao conflito intergalático com
+                                    os Skrulls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 ">
+                    <h1 style="text-align:left">Sobre</h1>
+
+                    <h1> Editorial</h1>
+                    <p>Redação: Daniel Augusto</p>
+                    <p>Pesquisador: Mateus Franco</p>
+                    <p>Gerente geral: Daniel Augusto</p>
+                </div>
+
+                </span>
+            </section>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer container-fluid d-flex justify-content-between p-3" style="height: 100px;">
+            <p class="mr-3" style="margin-left: 600px; width: 100%;">
+                Copyright 2020 - Disciplina de Desenvolvimento de Interfaces Web - <strong>ICEI PUC MINAS</strong>
+            </p>
+            <p>
+                <a href="" class="navbar-brand">
+                    <img src="img/logo.png" class="d-inline-block align-top logo" alt="" loading="lazy">
+                </a>
+            </p>
+        </div>
+        <p style="margin-left: 730px;">
+            <strong>ALUNO: DANIEL AUGUSTO DE CASTRO FRANCO</strong>
+        </p>
+    </footer>
+
+</body>
+
+</html>

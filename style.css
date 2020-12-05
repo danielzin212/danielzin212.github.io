@@ -1,0 +1,194 @@
+@media screen and(max-width:1000px) {
+    * {
+        width: 100%;
+    }
+}
+
+@media screen and(min-width:500px) {
+    * {
+        width: 100%;
+    }
+}
+
+@media header and(max-width:1000px) {
+    * {
+        width: 100%;
+    }
+}
+
+@media header and(max-width:600px) {}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.header_area {
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: 95px;
+}
+
+.card-film {
+    min-height: 450px;
+}
+
+.text-muted {
+    color: #f7f8f8!important;
+}
+
+.card-film .card-body {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #636161;
+}
+
+.cor {
+    background: unset;
+}
+
+.navbar-light .navbar-brand {
+    color: black;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.5cm;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: wheat;
+}
+
+
+/* cor do botões */
+
+.btn-primary {
+    background-color: black;
+    border-color: #FFF0F5;
+}
+
+.page-item.active .page-link {
+    background-color: black;
+    border-color: #FFF0F5;
+}
+
+.footer {
+    background-color: unset;
+    color: white;
+}
+
+.footer a {
+    color: rgba(0, 0, 0, .9);
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+
+/*Avaliações*/
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa {
+    font-size: 2.5em
+}
+
+.estrelas label i.fa:before {
+    content: '\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked~label i.fa:before {
+    color: #CCC;
+}
+
+.lanca {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container-rodapé {
+    background-color: rgb(228, 228, 230);
+    height: 90px;
+    text-align: center;
+}
+
+.carousel-indicators {
+    margin: 1px;
+    float: left;
+}
+
+#cabeçalhoo {
+    background-color: rgba(170, 167, 167, 0.349);
+}
+
+#em-destaque {
+    margin-bottom: 30px;
+}
+
+.corpo {
+    background-color: rgb(218, 214, 214);
+    ;
+}
+
+.título {
+    float: left;
+    width: 100%;
+}
+
+#video {
+    width: 50%;
+    float: left;
+}
+
+.descrição {
+    text-align: justify;
+}
+
+.descrição {
+    width: 100%;
+    text-align: left;
+}
+
+#título {
+    float: center;
+    text-align: left;
+}
+
+#botão {
+    float: right;
+}
+
+.ava {
+    max-width: 200px;
+}
+
+.caro {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+.novidades {
+    padding-top: 20px;
+}
+
+.entrevista {
+    padding-top: 20px;
+}
+
+.col-4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
